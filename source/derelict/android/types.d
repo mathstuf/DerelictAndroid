@@ -732,7 +732,7 @@ struct AUncalibratedEvent {
 }
 
 struct ASensorEvent {
-    int32_t version; /* sizeof(struct ASensorEvent) */
+    int32_t version;
     int32_t sensor;
     int32_t type;
     int32_t reserved0;
