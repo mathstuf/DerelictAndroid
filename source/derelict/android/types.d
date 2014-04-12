@@ -732,7 +732,7 @@ struct AUncalibratedEvent {
 }
 
 struct ASensorEvent {
-    int32_t version;
+    int32_t version_;
     int32_t sensor;
     int32_t type;
     int32_t reserved0;
@@ -751,20 +751,20 @@ struct ASensorEvent {
             AUncalibratedEvent uncalibrated_gyro;
             AUncalibratedEvent uncalibrated_magnetic;
             AMetaDataEvent meta_data;
-        };
-        union {
+        }
+        union u64 {
             uint64_t        data[8];
             uint64_t        step_counter;
-        } u64;
-    };
+        }
+    }
     int32_t reserved1[4];
 }
 
 struct ASensorManager;
 struct ASensorEventQueue;
 struct ASensor;
-alias const(ASensor) ASensorRef;
-alias const(ASensorRef) ASensorList;
+alias ASensorRef = const(ASensor);
+alias ASensorList = const(ASensorRef);
 
 // storage_manager.h
 struct AStorageManager;
