@@ -103,115 +103,6 @@ extern( C ) {
     alias nothrow int32_t function(AConfiguration* base, AConfiguration* requested) da_AConfiguration_match;
     alias nothrow int32_t function(AConfiguration* base, AConfiguration* test, AConfiguration* requested) da_AConfiguration_isBetterThan;
 
-    // input.h
-    alias nothrow int32_t function(const( AInputEvent )* event) da_AInputEvent_getType;
-    alias nothrow int32_t function(const( AInputEvent )* event) da_AInputEvent_getDeviceId;
-    alias nothrow int32_t function(const( AInputEvent )* event) da_AInputEvent_getSource;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getAction;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getFlags;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getKeyCode;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getScanCode;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getMetaState;
-    alias nothrow int32_t function(const( AInputEvent )* key_event) da_AKeyEvent_getRepeatCount;
-    alias nothrow int64_t function(const( AInputEvent )* key_event) da_AKeyEvent_getDownTime;
-    alias nothrow int64_t function(const( AInputEvent )* key_event) da_AKeyEvent_getEventTime;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getAction;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getFlags;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getMetaState;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getButtonState;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getEdgeFlags;
-    alias nothrow int64_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getDownTime;
-    alias nothrow int64_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getEventTime;
-    alias nothrow float function(const( AInputEvent )* motion_event) da_AMotionEvent_getXOffset;
-    alias nothrow float function(const( AInputEvent )* motion_event) da_AMotionEvent_getYOffset;
-    alias nothrow float function(const( AInputEvent )* motion_event) da_AMotionEvent_getXPrecision;
-    alias nothrow float function(const( AInputEvent )* motion_event) da_AMotionEvent_getYPrecision;
-    alias nothrow size_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getPointerCount;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getPointerId;
-    alias nothrow int32_t function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getToolType;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getRawX;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getRawY;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getX;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getY;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getPressure;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getSize;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getTouchMajor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getTouchMinor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getToolMajor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getToolMinor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index) da_AMotionEvent_getOrientation;
-    alias nothrow float function(const( AInputEvent )* motion_event,
-            int32_t axis, size_t pointer_index) da_AMotionEvent_getAxisValue;
-    alias nothrow size_t function(const( AInputEvent )* motion_event) da_AMotionEvent_getHistorySize;
-    alias nothrow int64_t function(const( AInputEvent )* motion_event,
-            size_t history_index) da_AMotionEvent_getHistoricalEventTime;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalRawX;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalRawY;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalX;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalY;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalPressure;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalSize;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalTouchMajor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalTouchMinor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalToolMajor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalToolMinor;
-    alias nothrow float function(const( AInputEvent )* motion_event, size_t pointer_index,
-            size_t history_index) da_AMotionEvent_getHistoricalOrientation;
-    alias nothrow float function(const( AInputEvent )* motion_event,
-            int32_t axis, size_t pointer_index, size_t history_index) da_AMotionEvent_getHistoricalAxisValue;
-    alias nothrow void function(AInputQueue* queue, ALooper* looper,
-            int ident, ALooper_callbackFunc callback, void* data) da_AInputQueue_attachLooper;
-    alias nothrow void function(AInputQueue* queue) da_AInputQueue_detachLooper;
-    alias nothrow int32_t function(AInputQueue* queue) da_AInputQueue_hasEvents;
-    alias nothrow int32_t function(AInputQueue* queue, AInputEvent** outEvent) da_AInputQueue_getEvent;
-    alias nothrow int32_t function(AInputQueue* queue, AInputEvent* event) da_AInputQueue_preDispatchEvent;
-    alias nothrow void function(AInputQueue* queue, AInputEvent* event, int handled) da_AInputQueue_finishEvent;
-
-    // log.h
-    alias nothrow int function(int prio, const( char )* tag, const( char )* text) da___android_log_write;
-
-    // looper.h
-    alias nothrow ALooper* function() da_ALooper_forThread;
-    alias nothrow ALooper* function(int opts) da_ALooper_prepare;
-    alias nothrow void function(ALooper* looper) da_ALooper_acquire;
-    alias nothrow void function(ALooper* looper) da_ALooper_release;
-    alias nothrow int function(int timeoutMillis, int* outFd, int* outEvents, void** outData) da_ALooper_pollOnce;
-    alias nothrow int function(int timeoutMillis, int* outFd, int* outEvents, void** outData) da_ALooper_pollAll;
-    alias nothrow void function(ALooper* looper) da_ALooper_wake;
-    alias nothrow int function(ALooper* looper, int fd, int ident, int events,
-            ALooper_callbackFunc callback, void* data) da_ALooper_addFd;
-    alias nothrow int function(ALooper* looper, int fd) da_ALooper_removeFd;
-
-    // native_activity.h
-    alias nothrow void function(ANativeActivity* activity) da_ANativeActivity_finish;
-    alias nothrow void function(ANativeActivity* activity, int32_t format) da_ANativeActivity_setWindowFormat;
-    alias nothrow void function(ANativeActivity* activity,
-            uint32_t addFlags, uint32_t removeFlags) da_ANativeActivity_setWindowFlags;
-    alias nothrow void function(ANativeActivity* activity, uint32_t flags) da_ANativeActivity_showSoftInput;
-    alias nothrow void function(ANativeActivity* activity, uint32_t flags) da_ANativeActivity_hideSoftInput;
-
-    // native_window.h
-    alias nothrow void function(ANativeWindow* window) da_ANativeWindow_acquire;
-    alias nothrow void function(ANativeWindow* window) da_ANativeWindow_release;
-    alias nothrow int32_t function(ANativeWindow* window) da_ANativeWindow_getWidth;
-    alias nothrow int32_t function(ANativeWindow* window) da_ANativeWindow_getHeight;
-    alias nothrow int32_t function(ANativeWindow* window) da_ANativeWindow_getFormat;
-    alias nothrow int32_t function(ANativeWindow* window,
-            int32_t width, int32_t height, int32_t format) da_ANativeWindow_setBuffersGeometry;
-    alias nothrow int32_t function(ANativeWindow* window, ANativeWindow_Buffer* outBuffer,
-            ARect* inOutDirtyBounds) da_ANativeWindow_lock;
-    alias nothrow int32_t function(ANativeWindow* window) da_ANativeWindow_unlockAndPost;
-
     // obb.h
     alias nothrow AObbInfo* function(const( char )* filename) da_AObbScanner_getObbInfo;
     alias nothrow void function(AObbInfo* obbInfo) da_AObbInfo_delete;
@@ -223,9 +114,6 @@ extern( C ) {
     alias nothrow ASensorManager* function() da_ASensorManager_getInstance;
     alias nothrow int function(ASensorManager* manager, ASensorList* list) da_ASensorManager_getSensorList;
     alias nothrow const( ASensor )* function(ASensorManager* manager, int type) da_ASensorManager_getDefaultSensor;
-    alias nothrow ASensorEventQueue* function(ASensorManager* manager,
-            ALooper* looper, int ident, ALooper_callbackFunc callback, void* data) da_ASensorManager_createEventQueue;
-    alias nothrow int function(ASensorManager* manager, ASensorEventQueue* queue) da_ASensorManager_destroyEventQueue;
     alias nothrow int function(ASensorEventQueue* queue, const( ASensor )* sensor) da_ASensorEventQueue_enableSensor;
     alias nothrow int function(ASensorEventQueue* queue, const( ASensor )* sensor) da_ASensorEventQueue_disableSensor;
     alias nothrow int function(ASensorEventQueue* queue, const( ASensor )* sensor, int32_t usec) da_ASensorEventQueue_setEventRate;
@@ -314,86 +202,6 @@ __gshared {
     da_AConfiguration_diff AConfiguration_diff;
     da_AConfiguration_match AConfiguration_match;
     da_AConfiguration_isBetterThan AConfiguration_isBetterThan;
-    da_AInputEvent_getType AInputEvent_getType;
-    da_AInputEvent_getDeviceId AInputEvent_getDeviceId;
-    da_AInputEvent_getSource AInputEvent_getSource;
-    da_AKeyEvent_getAction AKeyEvent_getAction;
-    da_AKeyEvent_getFlags AKeyEvent_getFlags;
-    da_AKeyEvent_getKeyCode AKeyEvent_getKeyCode;
-    da_AKeyEvent_getScanCode AKeyEvent_getScanCode;
-    da_AKeyEvent_getMetaState AKeyEvent_getMetaState;
-    da_AKeyEvent_getRepeatCount AKeyEvent_getRepeatCount;
-    da_AKeyEvent_getDownTime AKeyEvent_getDownTime;
-    da_AKeyEvent_getEventTime AKeyEvent_getEventTime;
-    da_AMotionEvent_getAction AMotionEvent_getAction;
-    da_AMotionEvent_getFlags AMotionEvent_getFlags;
-    da_AMotionEvent_getMetaState AMotionEvent_getMetaState;
-    da_AMotionEvent_getButtonState AMotionEvent_getButtonState;
-    da_AMotionEvent_getEdgeFlags AMotionEvent_getEdgeFlags;
-    da_AMotionEvent_getDownTime AMotionEvent_getDownTime;
-    da_AMotionEvent_getEventTime AMotionEvent_getEventTime;
-    da_AMotionEvent_getXOffset AMotionEvent_getXOffset;
-    da_AMotionEvent_getYOffset AMotionEvent_getYOffset;
-    da_AMotionEvent_getXPrecision AMotionEvent_getXPrecision;
-    da_AMotionEvent_getYPrecision AMotionEvent_getYPrecision;
-    da_AMotionEvent_getPointerCount AMotionEvent_getPointerCount;
-    da_AMotionEvent_getPointerId AMotionEvent_getPointerId;
-    da_AMotionEvent_getToolType AMotionEvent_getToolType;
-    da_AMotionEvent_getRawX AMotionEvent_getRawX;
-    da_AMotionEvent_getRawY AMotionEvent_getRawY;
-    da_AMotionEvent_getX AMotionEvent_getX;
-    da_AMotionEvent_getY AMotionEvent_getY;
-    da_AMotionEvent_getPressure AMotionEvent_getPressure;
-    da_AMotionEvent_getSize AMotionEvent_getSize;
-    da_AMotionEvent_getTouchMajor AMotionEvent_getTouchMajor;
-    da_AMotionEvent_getTouchMinor AMotionEvent_getTouchMinor;
-    da_AMotionEvent_getToolMajor AMotionEvent_getToolMajor;
-    da_AMotionEvent_getToolMinor AMotionEvent_getToolMinor;
-    da_AMotionEvent_getOrientation AMotionEvent_getOrientation;
-    da_AMotionEvent_getAxisValue AMotionEvent_getAxisValue;
-    da_AMotionEvent_getHistorySize AMotionEvent_getHistorySize;
-    da_AMotionEvent_getHistoricalEventTime AMotionEvent_getHistoricalEventTime;
-    da_AMotionEvent_getHistoricalRawX AMotionEvent_getHistoricalRawX;
-    da_AMotionEvent_getHistoricalRawY AMotionEvent_getHistoricalRawY;
-    da_AMotionEvent_getHistoricalX AMotionEvent_getHistoricalX;
-    da_AMotionEvent_getHistoricalY AMotionEvent_getHistoricalY;
-    da_AMotionEvent_getHistoricalPressure AMotionEvent_getHistoricalPressure;
-    da_AMotionEvent_getHistoricalSize AMotionEvent_getHistoricalSize;
-    da_AMotionEvent_getHistoricalTouchMajor AMotionEvent_getHistoricalTouchMajor;
-    da_AMotionEvent_getHistoricalTouchMinor AMotionEvent_getHistoricalTouchMinor;
-    da_AMotionEvent_getHistoricalToolMajor AMotionEvent_getHistoricalToolMajor;
-    da_AMotionEvent_getHistoricalToolMinor AMotionEvent_getHistoricalToolMinor;
-    da_AMotionEvent_getHistoricalOrientation AMotionEvent_getHistoricalOrientation;
-    da_AMotionEvent_getHistoricalAxisValue AMotionEvent_getHistoricalAxisValue;
-    da_AInputQueue_attachLooper AInputQueue_attachLooper;
-    da_AInputQueue_detachLooper AInputQueue_detachLooper;
-    da_AInputQueue_hasEvents AInputQueue_hasEvents;
-    da_AInputQueue_getEvent AInputQueue_getEvent;
-    da_AInputQueue_preDispatchEvent AInputQueue_preDispatchEvent;
-    da_AInputQueue_finishEvent AInputQueue_finishEvent;
-    da___android_log_write __android_log_write;
-    da_ALooper_forThread ALooper_forThread;
-    da_ALooper_prepare ALooper_prepare;
-    da_ALooper_acquire ALooper_acquire;
-    da_ALooper_release ALooper_release;
-    da_ALooper_pollOnce ALooper_pollOnce;
-    da_ALooper_pollAll ALooper_pollAll;
-    da_ALooper_wake ALooper_wake;
-    da_ALooper_addFd ALooper_addFd;
-    da_ALooper_removeFd ALooper_removeFd;
-    da_ANativeActivity_finish ANativeActivity_finish;
-    da_ANativeActivity_setWindowFormat ANativeActivity_setWindowFormat;
-    da_ANativeActivity_setWindowFlags ANativeActivity_setWindowFlags;
-    da_ANativeActivity_showSoftInput ANativeActivity_showSoftInput;
-    da_ANativeActivity_hideSoftInput ANativeActivity_hideSoftInput;
-    da_ANativeWindow_acquire ANativeWindow_acquire;
-    da_ANativeWindow_release ANativeWindow_release;
-    da_ANativeWindow_getWidth ANativeWindow_getWidth;
-    da_ANativeWindow_getHeight ANativeWindow_getHeight;
-    da_ANativeWindow_getFormat ANativeWindow_getFormat;
-    da_ANativeWindow_setBuffersGeometry ANativeWindow_setBuffersGeometry;
-    da_ANativeWindow_lock ANativeWindow_lock;
-    da_ANativeWindow_unlockAndPost ANativeWindow_unlockAndPost;
     da_AObbScanner_getObbInfo AObbScanner_getObbInfo;
     da_AObbInfo_delete AObbInfo_delete;
     da_AObbInfo_getPackageName AObbInfo_getPackageName;
@@ -402,8 +210,6 @@ __gshared {
     da_ASensorManager_getInstance ASensorManager_getInstance;
     da_ASensorManager_getSensorList ASensorManager_getSensorList;
     da_ASensorManager_getDefaultSensor ASensorManager_getDefaultSensor;
-    da_ASensorManager_createEventQueue ASensorManager_createEventQueue;
-    da_ASensorManager_destroyEventQueue ASensorManager_destroyEventQueue;
     da_ASensorEventQueue_enableSensor ASensorEventQueue_enableSensor;
     da_ASensorEventQueue_disableSensor ASensorEventQueue_disableSensor;
     da_ASensorEventQueue_setEventRate ASensorEventQueue_setEventRate;
