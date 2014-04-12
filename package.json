@@ -1,0 +1,16 @@
+{
+    "name": "derelict-android",
+    "description": "Dynamic bindings to Android's NDK APIs.",
+    "homepage": "https://github.com/mathstuf/DerelictAndroid",
+    "license": "Boost",
+    "authors": [
+        "Ben Boeckel"
+    ],
+
+    "targetName": "DerelictAndroid",
+    "targetPath": "lib",
+
+    "dependencies": {
+        "derelict-util": ">=1.0.0"
+    }
+}
