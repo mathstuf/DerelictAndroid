@@ -52,29 +52,6 @@ struct AAssetManager;
 struct AAssetDir;
 struct AAsset;
 
-// bitmap.h
-static immutable int ANDROID_BITMAP_RESULT_SUCCESS           =  0;
-static immutable int ANDROID_BITMAP_RESULT_BAD_PARAMETER     = -1;
-static immutable int ANDROID_BITMAP_RESULT_JNI_EXCEPTION     = -2;
-static immutable int ANDROID_BITMAP_RESULT_ALLOCATION_FAILED = -3;
-
-enum : int {
-    ANDROID_BITMAP_FORMAT_NONE      = 0,
-    ANDROID_BITMAP_FORMAT_RGBA_8888 = 1,
-    ANDROID_BITMAP_FORMAT_RGB_565   = 4,
-    ANDROID_BITMAP_FORMAT_RGBA_4444 = 7,
-    ANDROID_BITMAP_FORMAT_A_8       = 8,
-}
-alias AndroidBitmapFormat = int;
-
-struct AndroidBitmapInfo {
-    uint32_t width;
-    uint32_t height;
-    uint32_t stride;
-    int32_t  format;
-    uint32_t flags;
-}
-
 // configuration.h
 struct AConfiguration;
 
