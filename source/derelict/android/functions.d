@@ -34,6 +34,9 @@ private {
     import core.sys.posix.sys.types;
 }
 
+// XXX: Temporary; only valid on Solaris currently?
+alias off64_t = ulong;
+
 extern( C ) {
     // asset_manager.h
     alias nothrow AAssetDir* function(AAssetManager* mgr, const(char)* dirName) da_AAssetManager_openDir;
