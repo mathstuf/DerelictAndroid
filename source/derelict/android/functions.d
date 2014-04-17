@@ -151,6 +151,7 @@ __gshared {
     da_AAsset_seek AAsset_seek;
     da_AAsset_seek64 AAsset_seek64;
     da_AAsset_close AAsset_close;
+    da_AAsset_getBuffer AAsset_getBuffer;
     da_AAsset_getLength AAsset_getLength;
     da_AAsset_getLength64 AAsset_getLength64;
     da_AAsset_getRemainingLength AAsset_getRemainingLength;

@@ -56,6 +56,7 @@ class DerelictAndroidLoader : SharedLibLoader {
         bindFunc( cast( void** )&AAsset_seek, "AAsset_seek" );
         bindFunc( cast( void** )&AAsset_seek64, "AAsset_seek64" );
         bindFunc( cast( void** )&AAsset_close, "AAsset_close" );
+        bindFunc( cast( void** )&AAsset_getBuffer, "AAsset_getBuffer" );
         bindFunc( cast( void** )&AAsset_getLength, "AAsset_getLength" );
         bindFunc( cast( void** )&AAsset_getLength64, "AAsset_getLength64" );
         bindFunc( cast( void** )&AAsset_getRemainingLength, "AAsset_getRemainingLength" );
